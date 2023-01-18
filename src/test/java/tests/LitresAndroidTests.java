@@ -10,9 +10,23 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.back;
 import static io.qameta.allure.Allure.step;
 
 public class LitresAndroidTests extends TestBase {
+
+    @Feature("Mobile tests Litres")
+    @Story("Main page Litres")
+    @DisplayName("Check modules")
+    @Test
+    void checkModulesTest() {
+        ClickToSkip.clickAllPopUp();
+        ClickToSkip.clickAllPopUp();
+        step("Click on the ebooks module",() ->
+                $(AppiumBy.id("ru.litres.android:id/nav_store")).click());
+        step("Click on the audiobook module",() ->
+                $(AppiumBy.id("ru.litres.android:id/nav_my_audiobooks")).click());
+    }
 
     @Feature("Mobile tests Litres")
     @Story("Main page Litres")
@@ -22,7 +36,7 @@ public class LitresAndroidTests extends TestBase {
         ClickToSkip.clickAllPopUp();
         step("Search", () ->
                 $(AppiumBy.id("ru.litres.android:id/nav_search")).click());
-        $(AppiumBy.id("ru.litres.android:id/et_search_query")).sendKeys("The master and Margarita");
+        $(AppiumBy.id("ru.litres.android:id/et_search_query")).sendKeys("The master and margarit");
         step("Search result", () ->
                 $(AppiumBy.id("ru.litres.android:id/title")).shouldBe(visible));
     }
@@ -33,27 +47,12 @@ public class LitresAndroidTests extends TestBase {
     @Test
     void theInvalidSearchBook() {
         ClickToSkip.clickAllPopUp();
+        back();
         step("Search", () ->
                 $(AppiumBy.id("ru.litres.android:id/nav_search")).click());
         $(AppiumBy.id("ru.litres.android:id/et_search_query")).sendKeys("There should be a book here");
         step("Проверка результатов поиска", () ->
                 $(AppiumBy.id("ru.litres.android:id/title")).shouldHave(text("Nothing found")));
-    }
-
-    @Feature("Mobile tests Litres")
-    @Story("Main page Litres")
-    @DisplayName("Check modules")
-    @Test
-    void checkModulesTest() {
-        ClickToSkip.clickAllPopUp();
-        step("Click on the store module",() ->
-            $(AppiumBy.id("ru.litres.android:id/nav_store")).click());
-        step("Click on the audiobook module",() ->
-            $(AppiumBy.id("ru.litres.android:id/nav_my_audiobooks")).click());
-        step("Click on the profile module",() ->
-            $(AppiumBy.id("ru.litres.android:id/nav_profile")).click());
-//        $(AppiumBy.id("ru.litres.android:id/user_name"))
-//                .shouldHave(text(""));
     }
 }
 
