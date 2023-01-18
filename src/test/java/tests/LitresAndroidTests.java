@@ -36,7 +36,7 @@ public class LitresAndroidTests extends TestBase {
         ClickToSkip.clickAllPopUp();
         step("Search", () ->
                 $(AppiumBy.id("ru.litres.android:id/nav_search")).click());
-        $(AppiumBy.id("ru.litres.android:id/et_search_query")).sendKeys("The master and margarit");
+        $(AppiumBy.id("ru.litres.android:id/et_search_query")).sendKeys("the master and margar");
         step("Search result", () ->
                 $(AppiumBy.id("ru.litres.android:id/title")).shouldBe(visible));
     }
