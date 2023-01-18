@@ -73,22 +73,22 @@
 # <img width="5%" title="Jenkins" src="./images/icons/Jenkins.svg"> <a name="Jenkins">Jenkins</a>
 >**1. To start the build, you need to enter the parameters in the settings and then build with the specified parameters:**
 
-[<code><img width="800" title="Jenkins" src="./images/icons/Jenkins1.jpg"></code>](https://jenkins.autotests.cloud/job/litres_mobile_kiriesha/)
+[<code><img width="800" title="Jenkins" src="./images/icons/JenkinsMob.jpg"></code>](https://jenkins.autotests.cloud/job/litres_mobile_kiriesha/)
 
 
 >**2. After assembly, you can watch the Allure report:**
 
-[<code><img width="800" title="Jenkins" src="./images/icons/Jenkins2.jpg"></code>](https://jenkins.autotests.cloud/job/litres_mobile_kiriesha/)
+[<code><img width="800" title="Jenkins" src="./images/icons/JenkinsMob2.jpg"></code>](https://jenkins.autotests.cloud/job/litres_mobile_kiriesha/)
 
 [To Description](#Description)
 
 # <img width="5%" title="Allure Report" src="./images/icons/Allure-Report.svg"> <a name="Allure">Test results in Allure</a>
 >**Test run (Jenkins):**
 
-[<code><img width="800" title="Allure Report" src="./images/icons/Allure1.jpg"></code>](https://jenkins.autotests.cloud/job/Diploma_Kiriesha/2/allure/)
+[<code><img width="800" title="Allure Report" src="./images/icons/AllureMob.jpg"></code>](https://jenkins.autotests.cloud/job/Diploma_Kiriesha/2/allure/)
 
 
-[<code><img width="800" title="Allure Report" src="./images/icons/Allure2.jpg"></code>](https://jenkins.autotests.cloud/job/Diploma_Kiriesha/2/allure/#graph)
+[<code><img width="800" title="Allure Report" src="./images/icons/AllureMob2.jpg"></code>](https://jenkins.autotests.cloud/job/Diploma_Kiriesha/2/allure/#graph)
 
 [To Description](#Description)
 
